@@ -74,7 +74,7 @@ impl Parser {
                 });
             }
             "string" => Ok(
-                repeat_with(|| thread_rng().gen_range(20_u8..126_u8) as char)
+                repeat_with(|| thread_rng().gen_range(10_u8..126_u8) as char)
                     .take(random::<u16>() as usize)
                     .collect::<String>(),
             ),
